@@ -13,6 +13,7 @@
 		A0E028161DA0F37000FFF347 /* SmashTag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0E028141DA0F37000FFF347 /* SmashTag.xcdatamodeld */; };
 		A0E028181DA0F37000FFF347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E028171DA0F37000FFF347 /* Assets.xcassets */; };
 		A0E0281B1DA0F37000FFF347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E028191DA0F37000FFF347 /* LaunchScreen.storyboard */; };
+		A0E028231DA0F42A00FFF347 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E028221DA0F42A00FFF347 /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A0E028171DA0F37000FFF347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0E0281A1DA0F37000FFF347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0E0281C1DA0F37000FFF347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0E028221DA0F42A00FFF347 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = "../../../Library/Developer/Xcode/DerivedData/SmashTagSpace-hfftxiedykppqpguziknnbbwgsad/Build/Products/Debug-iphoneos/Twitter.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E028231DA0F42A00FFF347 /* Twitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 		A0E028011DA0F37000FFF347 = {
 			isa = PBXGroup;
 			children = (
+				A0E028221DA0F42A00FFF347 /* Twitter.framework */,
 				A0E0280C1DA0F37000FFF347 /* SmashTag */,
 				A0E0280B1DA0F37000FFF347 /* Products */,
 			);
@@ -292,6 +296,7 @@
 				A0E028211DA0F37000FFF347 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
