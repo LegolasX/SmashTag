@@ -27,7 +27,17 @@ class TweetTableViewController: UITableViewController,UITextFieldDelegate{
             if NSUserDefaults.standardUserDefaults().valueForKey("isFirstOpen") != nil //这个值压根为nil的话意味着这之前未曾进行过查询或者是删除了
             {
                 var tempHistory = NSUserDefaults.standardUserDefaults().valueForKey("history") as? [String]
-                tempHistory?.insert(searchText!, atIndex: 0)
+                var check = true
+                for history in tempHistory! {
+                    if searchText! == history {
+                        check = false
+                        tempHistory?.removeAtIndex((tempHistory?.indexOf(history))!)
+                        tempHistory?.insert(history, atIndex: 0)
+                    }
+                }
+                if check {
+                    tempHistory?.insert(searchText!, atIndex: 0)
+                }
                 NSUserDefaults.standardUserDefaults().setObject(tempHistory!, forKey: "history")
             } else {
                 NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isFirstOpen")
@@ -47,7 +57,7 @@ class TweetTableViewController: UITableViewController,UITextFieldDelegate{
     }
     private  var twitterRepuest: Twitter.Request? {
         if let query = searchText where !query.isEmpty {
-            return Twitter.Request(search: query + " -filter:retweets", count: 200)
+            return Twitter.Request(search: query + " -filter:retweets", count: 20)
         }
         return nil
     }
